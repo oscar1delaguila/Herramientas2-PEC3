@@ -1,0 +1,85 @@
+/**
+ * Use this file to import partials.
+ * Do not include SCSS code in this file.
+ */
+
+ 
+
+/**
+ * Import npm dependencies
+ * see: https://v2.parceljs.org/features/module-resolution/
+ * see commented examples below
+ */
+// @import "some-node-module";
+// @import "@some-company/some-node-module";
+
+ 
+@import "npm:@fortawesome/fontawesome-free/css/all.css";
+
+
+/**
+ * Import layers (metodology ITCSS)
+ * It's a best practice to use a different partial for each page
+ */
+
+//@import "settings/settings";
+
+//@import "generic/generic";
+
+//@import "elements/elements";
+
+//@import "objects/objects";
+
+//@import "utilities/utilities";
+
+
+//@import "components/item-band-component";
+//@import "components/block-footer";
+//@import "components/img-info";
+
+/**
+ * This injects Tailwind's base styles and any base styles registered by
+ * plugins.
+ */
+@tailwind base;
+
+/**
+ * This injects Tailwind's component classes and any component classes
+ * registered by plugins.
+ */
+@tailwind components;
+
+h6 {
+color:hsl(180, 100%, 97%);
+}
+
+@layer base {
+    * {
+        @apply box-border;
+    }
+
+    p {
+        @apply leading-normal text-left;
+    }
+  
+}
+
+@layer components {
+
+    .numerado-lista-articulo {
+      @apply basis-6 w-6 shrink-0 h-6 text-sm text-primary-color text-center bg-white rounded-full border-solid border border-primary-color;
+    }
+  }
+  
+
+
+
+/**
+ * This injects Tailwind's utility classes and any utility classes registered
+ * by plugins.
+ */  
+@tailwind utilities;
+
+/**
+ * Do NOT include anything else in this file!
+ */

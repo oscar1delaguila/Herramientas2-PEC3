@@ -1,0 +1,25 @@
+
+
+/*-----------------------------------------------------------------------------------------------------*\
+*  Componente de ubicar un imagen en la página
+\*-----------------------------------------------------------------------------------------------------*/
+
+
+@mixin img-info($with-img: $width-img) {
+  width: $with-img;
+  //height: 60vh;
+  //background-image: url("../images/foto.jpg");
+  //background-repeat: no-repeat;
+  //background-position: center;
+  //background-size: cover;
+  
+}
+
+.c-img-info-up-article {
+  @include img-info(90%);
+}
+
+.c-img-info-middle-article {
+  @include img-info(auto);     //El ancho nos lo da bootstrap
+}
+

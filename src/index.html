@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="stylesheet" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <title>Music Festival</title>
+  </head>
+  
+  <body class="bg-azure-color-700 text-grey-dark text-base m-0 font-sans">
+
+    <include src="./components/header.html"></include>
+
+
+    <h1 class="p-2vh text-4vh text-burlywood text-center" >Conciertos en Almendralejo de Taronja</h1>
+    <h3 class="text-2vh text-chocolate text-center my-2.5">(Las imagenes son capturas de pantalla de los videos de Youtube que se pueden compartir)</h3>
+
+    <section class="flex flex-wrap items-center justify-around w-10/12 mx-auto">
+
+
+
+      <include src="./components/item-band-music.html" locals='{
+                  "path" : "./assets/images/eros-la-cosa-mas-bella.jpg",
+                  "artist" : "Eros Ramazzotti",
+                  "typemusic" : "Pop Internacional",       
+                  "description": "Para los más sentimentales y tranquilos ofrecemos este concierto del gran ser humano Eros Ramazzotti haciéndo más comprensibles los sentimientos humanos..."
+              }'
+      ></include>
+
+
+      <include src="./components/item-band-music.html" locals='{
+                  "path" : "./assets/images/carl-cox-ibiza.jpg",
+                  "artist" : "Carl Cox",
+                  "typemusic" : "House/Tecno",       
+                  "description": "Carl Cox reconocido internacionalmente muestra su lado más tecno queriendo hacer de nuestro pueblo la segunda Ibiza!!!!!."
+              }'
+      ></include>
+
+
+
+      <include src="./components/item-band-music.html" locals='{
+                  "path" : "./assets/images/juan-magan.jpg",
+                  "artist" : "Juan Magán",
+                  "typemusic" : "Pop Nacional",       
+                  "description": "A Nuestro querídisimo compatriota no se le caen los anillos por cantar en nuestro humilde pueblo sus mejores canciones con letras realmente conmovedoras y realistas."
+              }'
+      ></include>
+
+      
+      <include src="./components/item-band-music.html" locals='{
+                "path" : "./assets/images/carolus-rex.jpg",
+                "artist" : "Sabaton",
+                "typemusic" : "Heavy Metal",       
+                "description": "Sabaton quiere promocionar nuevamente su álbum Carolus para reforzar su presencia en nuestro país."
+            }'
+      ></include>
+
+
+      <include src="./components/item-band-music.html" locals='{
+                "path" : "./assets/images/iron-the-writing-on-the-wall.jpg",
+                "artist" : "Iron Maiden",
+                "typemusic" : "Heavy Metal",       
+                "description": "Lo más nuevo de Iron Maiden llega a España primeramente a nuestro pueblo gracias a la amistad del alcalde con el grupo en su época Heavy de nuestro gran alcalde."
+            }'
+      ></include>
+
+      <include src="./components/item-band-music.html" locals='{
+                "path" : "./assets/images/joe-satriani.jpg",
+                "artist" : "Joe Satriani",
+                "typemusic" : "Melódica Guitarra eléctrica",       
+                "description": "Joe Satriani rememora su álbum Surfing with the Alien en nuestro pueblo como obra benéfica y acto de solidaridad a los más faltos de música para gozar."
+            }'
+      ></include>
+
+
+
+    </section>
+
+    <include src="./components/footer.html"></include>
+    
+
+  </body>
+</html>
