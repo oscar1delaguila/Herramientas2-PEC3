@@ -1,10 +1,12 @@
 
 
+const { blue } = require('tailwindcss/colors');
 const colors = require('tailwindcss/colors');
+const plugin = require('tailwindcss/plugin');
 
 module.exports = {
 
-  content: ['./src/**/*.{html,js}'],
+  content: ['./src/**/*.html'],
 
   theme: {
     screens: {
@@ -24,12 +26,12 @@ module.exports = {
       'chocolate':'#d2691e',
       'azure-color': {
 
-        //color por defecto de azure
-        DEFAULT:'#f0ffff',
-        //azure con 70 por ciento de brillante
-        //utilizamos la definición de color hsl para describir la función **color.scale** de scss
-        //para especificar 0.7 de brillantez
-        700:'#f1ffff'
+      //color por defecto de azure
+      DEFAULT:'#f0ffff',
+      //azure con 70 por ciento de brillante
+      //utilizamos la definición de color hsl para describir la función **color.scale** de scss
+      //para especificar 0.7 de brillantez
+      700:'#f1ffff'
 
       }
     },
@@ -54,6 +56,7 @@ module.exports = {
         '10vh': '10vh',
         '60vh': '60vh'
       },
+
       margin: {
         'vh5':'5vh',
         '2vw':'2vw',
@@ -68,17 +71,28 @@ module.exports = {
         '2': '2 2 0%',
         '3': '3 3 0%',
       },
-      
+
       flexBasis: {
         '13/50':'26%'
       },
+
       backgroundImage: {
         'foto-pattern': "url('../images/foto.jpg')",
       }
-
-
     }
   },
 
-  plugins: [],
+  plugins: [
+    plugin(function({ addComponents }) {
+      addComponents({
+        '.btn': {
+          padding: '.5rem 1rem ',
+          borderRadius: '.25rem ',
+          fontWeight: '600',
+          backgroundColor:'#1b3d87',
+          color:'#00ffff'
+        },
+      })
+    })
+  ]
 }
